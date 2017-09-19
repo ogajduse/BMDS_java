@@ -35,7 +35,7 @@ public class MyClass {
         try {
             division(10, 0);
         } catch (ArithmeticException e) {
-            e.printStackTrace();
+            System.err.println(e);
         }
         ArrayList<Integer> arrayList = new ArrayList<>();
         for (int i = 10; i > 0; i--) arrayList.add(i);
