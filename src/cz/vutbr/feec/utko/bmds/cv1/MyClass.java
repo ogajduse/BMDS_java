@@ -11,7 +11,7 @@ public class MyClass {
         return a + b;
     }
 
-    static double division(double a, double b) {
+    static double division(double a, double b) throws ArithmeticException {
         System.out.println(a / b);
         if (b == 0) {
             throw new ArithmeticException("Can't do division by zero!");
@@ -26,7 +26,6 @@ public class MyClass {
     static int listMultiply(ArrayList<Integer> list) {
         int sum = 1;
         for (int a : list) sum *= a;
-        System.out.println("ArrayList sum: " + sum);
         return sum;
     }
 
@@ -42,22 +41,29 @@ public class MyClass {
         listOut(arrayList);
         Collections.sort(arrayList);
         listOut(arrayList);
+        System.out.println("ArrayList sum: " + listMultiply(arrayList));
         HashMap<Integer, String> hm = new HashMap<>();
-        hm.put(4, "Hello world!");
+        hm.put(1, "One");
+        hm.put(2, "Two");
+        hm.put(3, "Three");
+        hm.put(4, "Four");
         if (hm.containsKey(4)) {
             System.out.println("Contains key!");
         } else {
             System.out.println("Does not contain key!");
         }
-        if (hm.containsValue("Hello world!")) {
+        if (hm.containsValue("Two")) {
             System.out.println("Contains value!");
         } else {
             System.out.println("Does not contain value!");
         }
-        System.out.println(hm.size());
-        System.out.println(hm.keySet());
-        System.out.println(hm.values());
-        for (Map.Entry<Integer, String> entry : hm.entrySet())
-            System.out.println(entry.getKey() + "->" + entry.getValue());
+        System.out.println("Hash map size: " + hm.size());
+        System.out.println("Keys: " + hm.keySet());
+        System.out.println("Values: " + hm.values());
+        int i = 0;
+        for (Map.Entry<Integer, String> entry : hm.entrySet()) {
+            if (i % 2 != 1) System.out.println(entry.getKey() + "->" + entry.getValue());
+            i++;
+        }
     }
 }
