@@ -12,14 +12,14 @@ public class ListClass {
     }
 
     public Integer getFirst() throws IOException {
-        if (list.size() == 0)
+        if (list.isEmpty())
             throw new IOException("List is empty");
         return list.get(0);
 
     }
 
     public Integer getLast() throws IOException {
-        if (list.size() == 0)
+        if (list.isEmpty())
             throw new IOException("List is empty");
         return list.get(list.size() - 1);
     }
