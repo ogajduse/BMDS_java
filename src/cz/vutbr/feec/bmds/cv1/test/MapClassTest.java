@@ -1,5 +1,6 @@
-package cz.vutbr.feec.bmds.cv1;
+package cz.vutbr.feec.bmds.cv1.test;
 
+import cz.vutbr.feec.bmds.cv1.MapClass;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

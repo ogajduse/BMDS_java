@@ -1,4 +1,4 @@
-package cz.vutbr.feec.utko.bmds.cv1;
+package cz.vutbr.feec.bmds.week1;
 
 import java.util.ArrayList;
 import java.util.Collections;
